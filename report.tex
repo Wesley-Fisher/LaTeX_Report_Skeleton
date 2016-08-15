@@ -1,0 +1,40 @@
+\documentclass{article}
+
+\include{packages}
+\include{styling}
+
+\begin{document}
+	
+% Front Matter
+\pagenumbering{gobble}
+\addsection{LetterOfTransmittal}
+\addsection{TitlePage}
+
+\setcounter{secnumdepth}{0}
+\addsection{ExecutiveSummary}
+\setcounter{secnumdepth}{4}
+
+\pagenumbering{roman}
+
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+
+% Body
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\setcounter{section}{0}
+\addsection{Introduction}
+
+
+% References
+\bibliographystyle{unsrt}
+\bibliography{./bibliography}
+
+\setcounter{secnumdepth}{0}
+
+\end{document}

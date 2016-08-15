@@ -1,0 +1,53 @@
+% Figure Label, Figure filename (...png), Caption, scale
+\newcommand{\addfigure}[4]
+{
+
+\begin{figure}[H]
+	\centering
+	\fbox{
+\includegraphics[width=#4\linewidth]{./Figures/#2}
+         }
+	\caption{#3}
+	\label{fig:#1}
+\end{figure}
+}
+
+% Table Label, Table filename (...png), Caption
+\newcommand{\addtable}[3]
+{
+	\begin{table}[H]
+		\centering
+		\caption{#3}
+		\input{./Data/#2}
+
+		\label{tab:#1}
+	\end{table}
+	}
+	
+% Command for referencing a figure
+\newcommand{\reffig}[1]
+{
+	Figure \ref{fig:#1}	
+}
+
+\newcommand{\reftable}[1]
+{
+	Table \ref{tab:#1}	
+}
+
+\newcommand{\refsection}[1]
+{
+	Section \ref{tab:#1}	
+}
+
+\newcommand{\addsection}[1]
+{
+	\include{./Sections/#1/#1}	
+}
+
+%% label, language, filename, firstline, lastline, caption
+\newcommand{\addcodesnippet}[6]
+{
+	\1stinputlisting[language=#2, firstline=#4, lastline=#5, caption=#6]{#3}
+}
+
