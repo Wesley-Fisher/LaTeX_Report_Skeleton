@@ -1,0 +1,9 @@
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
+!report.tex
+!packages.tex
+!README.md
+!reportmacros.sty
+!styling.tex
