@@ -6,9 +6,10 @@
 %{USE
 report.tex is supposed to remain unchanged
 
-use frontmatter.tex, mainbody.tex, endmatter.tex to add
-  files to the relevant sections of the report
+create frontmatter.tex, mainbody.tex, endmatter.tex in Sections
+  use these to files to the relevant sections of the report
   these will be untracked by git
+  examples below
   
 add figures, table data, etc to the relevant folders
 no changes to these folders will be tracked by git
@@ -25,6 +26,40 @@ I've used
 to ignore changes to many files
   git update-index --no-assume-unchanged FILE
 can be used to undo this if needed
+%}
+
+%{ EXAMPLE FRONTMATTER.TEX
+\pagenumbering{gobble}
+\addsection{LetterOfTransmittal}
+\addsection{TitlePage}
+
+\setcounter{secnumdepth}{0}
+\addsection{ExecutiveSummary}
+\setcounter{secnumdepth}{4}
+
+\pagenumbering{roman}
+
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+%}
+
+%{ EXAMPLE MAINBODY.TEX
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\setcounter{section}{0}
+\addsection{Introduction}
+%}
+
+%{ EXAMPLE ENDMATTER.TEX
+% References
+\bibliographystyle{unsrt}
+\bibliography{./bibliography}
+
+\setcounter{secnumdepth}{0}
 %}
 
 \begin{document}
