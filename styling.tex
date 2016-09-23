@@ -9,15 +9,21 @@
 \settowidth{\mylen}{\cfttabpresnum\cfttabaftersnum}
 \addtolength{\cfttabnumwidth}{\mylen}
 
+\setlength{\cftsecnumwidth}{2em}
+\setlength{\cftsubsecnumwidth}{2em}
+
 \usepackage{geometry}
 \geometry{
-	left=25mm,
-	right=25mm,
+	left=40mm,
+	right=38mm,
 	top=25mm,
 	bottom=25mm
 }
 
-\renewcommand{\familydefault}{\sfdefault}
+\linespread{1.6}
+\doublespacing
+
+%\renewcommand{\familydefault}{\fdefault}
 \renewcommand{\thesection}{\arabic{section}.0}
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 \setlength{\parindent}{0em}
