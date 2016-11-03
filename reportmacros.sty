@@ -14,7 +14,7 @@
 \end{figure}
 }
 
-% Table Label, Table filename (...png), Caption
+% Table Label, Table filename, Caption
 \newcommand{\addtable}[3]
 {
 	\begin{table}[H]
@@ -38,9 +38,12 @@
 \newcommand{\refsection}[1]
 {Section \ref{#1}}
 
+\newcommand{\refappendix}[1]
+{Appendix \ref{#1}}
+
 \newcommand{\addsection}[1]
 {
-	\include{./Sections/#1/#1}	
+	\input{./Sections/#1/_#1}	
 }
 
 \newcommand{\addsubsection}[2]
@@ -51,6 +54,11 @@
 %% label, language, filename, firstline, lastline, caption
 \newcommand{\addcodesnippet}[6]
 {
-	\1stinputlisting[language=#2, firstline=#4, lastline=#5, caption=#6]{#3}
+	\1stinputlisting[language=#2, firstline=#4, lastline=#5, caption=#6, breaklines=true]{./Code/#3}
+}
+
+\newcommand{\addcodefile}[4]
+{
+	\lstinputlisting[language=#2, caption=#4, breaklines=true,backgroundcolor = \color{lightgray}]{./Code/#3}
 }
 
