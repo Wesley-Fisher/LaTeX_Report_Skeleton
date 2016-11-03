@@ -20,11 +20,19 @@
 	bottom=25mm
 }
 
-\linespread{1.6}
-\doublespacing
+%\linespread{1.6}
+%\doublespacing
 
 %\renewcommand{\familydefault}{\fdefault}
 \renewcommand{\thesection}{\arabic{section}.0}
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
+
+\lstset{language=C++,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{green}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#}
+}
