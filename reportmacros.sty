@@ -52,13 +52,13 @@
 }
 
 %% label, language, filename, firstline, lastline, caption
-\newcommand{\addcodesnippet}[6]
+\newcommand{\addcodesnippet}[5]
 {
-	\lstinputlisting[language=#2, firstline=#4, lastline=#5, caption=#6, breaklines=true]{./Code/#3}
+	\lstinputlisting[language=#1, firstline=#3, lastline=#4, caption=#5, breaklines=true]{./Code/#2}
 }
 
-\newcommand{\addcodefile}[4]
+\newcommand{\addcodefile}[3]
 {
-	\lstinputlisting[language=#2, caption=#4, breaklines=true,backgroundcolor = \color{lightgray}]{./Code/#3}
+	\lstinputlisting[language=#1, caption=#3, breaklines=true,backgroundcolor = \color{lightgray}]{./Code/#2}
 }
 
