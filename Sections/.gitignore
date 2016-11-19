@@ -3,3 +3,6 @@
 # Except this file
 !.gitignore
 !create_sec.py
+!ex_frontmatter.tex
+!ex_mainbody.tex
+!ex_endmatter.tex
