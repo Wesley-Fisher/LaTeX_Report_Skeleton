@@ -44,27 +44,6 @@
 \newcommand{\refappendix}[1]
 {Appendix \ref{#1}}
 
-\newcommand{\addsection}[1]
-{
-	\include{./Sections/#1/_#1}	
-}
-
-\newcommand{\softaddsection}[1]
-{
-	\input{./Sections/#1/_#1}	
-}
-
-\newcommand{\forcedaddsection}[1]
-{
-	\newpage
-	\input{./Sections/#1/_#1}	
-}
-
-\newcommand{\addsubsection}[2]
-{
-	\input{./Sections/#1/#2}
-}
-
 %% label, language, filename, firstline, lastline, caption
 \newcommand{\addcodesnippet}[5]
 {
