@@ -1,49 +1,9 @@
-\newlength{\mylen}
-\renewcommand{\cftfigpresnum}{\figurename\enspace}
-\renewcommand{\cftfigaftersnum}{:}
-\settowidth{\mylen}{\cftfigpresnum\cftfigaftersnum}
-\addtolength{\cftfignumwidth}{\mylen}
+\input{./Styling/tables.tex}
+\input{./Styling/code.tex}
+\input{./Styling/headings.tex}
+\input{./Styling/layout.tex}
+\input{./Styling/toc.tex}
 
-\renewcommand{\cfttabpresnum}{\tablename\enspace}
-\renewcommand{\cfttabaftersnum}{:}
-\settowidth{\mylen}{\cfttabpresnum\cfttabaftersnum}
-\addtolength{\cfttabnumwidth}{\mylen}
 
 \setlength{\cftsecnumwidth}{2em}
 \setlength{\cftsubsecnumwidth}{2em}
-
-\usepackage{geometry}
-\geometry{
-	left=40mm,
-	right=38mm,
-	top=25mm,
-	bottom=25mm
-}
-
-%\linespread{1.6}
-%\doublespacing
-
-%\renewcommand{\familydefault}{\fdefault}
-%\renewcommand{\thesection}{\arabic{section}.0XXX}
-%\renewcommand{\thesubsection}{.XX}%\arabic{section}.\arabic{subsection}}
-
-
-\def\thesection{\arabic{section}.0}
-\def\thesubsection{\arabic{section}.\arabic{subsection}}
-\def\thesubsubsection{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
-
-\setcounter{secnumdepth}{6}
-\setlength{\parindent}{0em}
-\setlength{\parskip}{1em}
-
-\lstset{language=C++,
-	basicstyle=\ttfamily,
-	keywordstyle=\color{blue}\ttfamily,
-	stringstyle=\color{red}\ttfamily,
-	commentstyle=\color{green}\ttfamily,
-	morecomment=[l][\color{magenta}]{\#}
-}
-
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
