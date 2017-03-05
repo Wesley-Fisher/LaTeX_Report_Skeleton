@@ -1,0 +1,57 @@
+% Figure Label, Figure filename (...png), Caption, scale
+\newcommand{\addfigure}[4]
+{
+
+\begin{figure}[H]
+	\centering
+	\setlength{\fboxsep}{0pt}%
+	\setlength{\fboxrule}{1pt}%
+	\fbox{%
+\includegraphics[width=#4\linewidth]{./Figures/#2}%
+         }
+	\caption{#3}
+	\label{fig:#1}
+\end{figure}
+}
+
+% Table Label, Table filename, Caption
+\newcommand{\addtable}[3]
+{
+	\begin{table}[H]
+		\centering
+		\caption{#3}
+		\input{./Data/#2}
+
+		\label{tab:#1}
+	\end{table}
+	}
+	
+\newcommand{\addthumbnail}[2]
+{
+	\includegraphics[width=#2\linewidth]{./Figures/#1}%
+}
+	
+% Command for referencing a figure
+\newcommand{\reffig}[1]
+{Figure \ref{fig:#1}}
+
+\newcommand{\reftable}[1]
+{Table \ref{tab:#1}}
+
+\newcommand{\refsection}[1]
+{Section \ref{#1}}
+
+\newcommand{\refappendix}[1]
+{Appendix \ref{#1}}
+
+%% label, language, filename, firstline, lastline, caption
+\newcommand{\addcodesnippet}[5]
+{
+	\lstinputlisting[language=#1, firstline=#3, lastline=#4, caption=#5, breaklines=true]{./Code/#2}
+}
+
+\newcommand{\addcodefile}[3]
+{
+	\lstinputlisting[language=#1, caption=#3, breaklines=true,backgroundcolor = \color{lightgray}]{./Code/#2}
+}
+
