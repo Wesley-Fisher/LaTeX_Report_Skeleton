@@ -26,6 +26,18 @@
 	\end{table}
 	}
 	
+% Table Label, Table filename, Caption
+\newcommand{\addcsvtable}[3]
+{
+	\csvautolongtable[table head={
+		\caption{#3} \label{tab:#1}\\
+		\hline
+		\csvlinetotablerow\\ \hline
+		\endfirsthead
+		\hline
+		\endfoot}, respect all]{./Data/#2}
+}
+	
 \newcommand{\addthumbnail}[2]
 {
 	\includegraphics[width=#2\linewidth]{./Figures/#1}%
