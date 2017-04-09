@@ -56,14 +56,15 @@
 \newcommand{\refappendix}[1]
 {Appendix \ref{#1}}
 
+\definecolor{light-gray}{gray}{0.95}
 %% language, filename, firstline, lastline, caption
 \newcommand{\addcodesnippet}[5]
 {
-	\lstinputlisting[language=#1, firstline=#3, lastline=#4, caption=#5, breaklines=true]{./Code/#2}
+	\lstinputlisting[language=#1, firstline=#3, lastline=#4, caption=#5, breaklines=true,backgroundcolor = \color{light-gray}]{./Code/#2}
 }
 
 \newcommand{\addcodefile}[3]
 {
-	\lstinputlisting[language=#1, caption=#3, breaklines=true,backgroundcolor = \color{lightgray}]{./Code/#2}
+	\lstinputlisting[language=#1, caption=#3, breaklines=true,backgroundcolor = \color{light-gray}]{./Code/#2}
 }
 
