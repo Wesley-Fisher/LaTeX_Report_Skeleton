@@ -1,5 +1,5 @@
 # LaTeX_Report_Skeleton
-##INSTRUCTIONS
+## INSTRUCTIONS
 report.tex is supposed to remain unchanged
 create bibliography.bib in this directory
  
