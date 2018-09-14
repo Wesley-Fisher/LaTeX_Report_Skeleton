@@ -15,7 +15,6 @@ This report skeleton comes with many features, both included in LaTeX, by design
 
 ## Future Work
  * A To-Do macro
- * Better organization of styling files
  * Standardization of methods of compiling the report, and versions of LaTeX compilers.
  * Testing
 
@@ -79,7 +78,7 @@ This is a macro for adding a table stored in a ```.tex``` file to the report. Th
 This macro is similar to ```addtable```, but allows using a csv-formatted file.
 
 ### Referencing Macros
-These macros are used for referencing items in the report, such as figures and tables. They use the ```label``` mentioned above. When needed, an numbers will be updated automatically (ex: if a new figure is added).
+These macros are used for referencing items in the report, such as figures and tables. They use the ```label``` mentioned above. When needed, numbers will be updated automatically (ex: if a new figure is added).
 
 ```reffig{label}``` will produce ```Figure X```
 
@@ -92,7 +91,7 @@ These macros are used for referencing items in the report, such as figures and t
 ### addcodesnippet
 ```addcodesnippet{language}{filename}{firstline}{lastline}{caption}```
 
-This macro adds a snippet of code from a file in the ```Code``` directory. Only lines between ```firstline``` and ```lastline``` are included. ```language``` is the programming language, which may be identified and used for specific auto-formatting of the code.
+This macro adds a snippet of code from a file in the ```Code``` directory. Only lines between ```firstline``` and ```lastline``` are included. ```language``` is the programming language, which may be identified and used for specific auto-formatting of the code. See ```Styling/code.tex``` for some examples of language styling.
 
 ### addcodefile
 ```addcodefile{language}{filename}{caption}```
