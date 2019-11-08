@@ -1,0 +1,67 @@
+\documentclass{article}
+\include{./ReportFormatting/packages}
+\include{./ReportFormatting/styling}
+\input{./ReportFormatting/reportmacros}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN FRONTMATTER
+\setcounter{secnumdepth}{0}
+\pagenumbering{gobble}
+
+% Recommended sections to create
+% Currently excluded for brevity
+% Letter Of Transmittal
+% Title Page
+
+\setcounter{secnumdepth}{0}
+
+% Recommended section
+% Executive Summary
+
+\setcounter{secnumdepth}{4}
+\pagenumbering{roman}
+
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\setcounter{secnumdepth}{4}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\setcounter{section}{0}
+% END FRONTMATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN MAIN BODY
+
+\input{./Sections/demo}
+
+% END MAIN BODY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN ENDMATTER
+
+% References
+\newpage
+\bibliographystyle{unsrt}
+\bibliography{ReportFormatting/examplebibliography}
+
+\setcounter{secnumdepth}{1}
+\titleformat{\section}{\large\bfseries}{\appendixname~\thesection: }{0.5em}{}
+
+% Appendices
+\begin{appendices}
+% Your Appendices Here
+
+\end{appendices}
+% END ENDMATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

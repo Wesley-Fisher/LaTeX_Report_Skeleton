@@ -1,4 +1,4 @@
-% Figure Label, Figure filename (...png), Caption, scale
+%% Figure Label, Figure filename (...png), Caption, scale
 \newcommand{\addfigure}[4]
 {
 
@@ -14,7 +14,8 @@
 \end{figure}
 }
 
-% Table Label, Table filename, Caption
+
+%% Table Label, Table filename, Caption
 \newcommand{\addtable}[3]
 {
 	\begin{table}[H]
@@ -26,7 +27,8 @@
 	\end{table}
 	}
 	
-% Table Label, Table filename, Caption
+
+%% Table Label, Table filename, Caption
 \newcommand{\addcsvtable}[3]
 {
 	\csvautolongtable[table head={
@@ -37,34 +39,52 @@
 		\hline
 		\endfoot}, respect all]{./Data/#2}
 }
-	
+
+
+%% Image name, Width	
 \newcommand{\addthumbnail}[2]
 {
 	\includegraphics[width=#2\linewidth]{./Figures/#1}%
 }
 	
-% Command for referencing a figure
+
+%% Command for referencing a figure
 \newcommand{\reffig}[1]
 {Figure \ref{fig:#1}}
 
+
+%% Command for referencing a table
 \newcommand{\reftable}[1]
 {Table \ref{tab:#1}}
 
+
+%% Command for referencing a section
 \newcommand{\refsection}[1]
 {Section \ref{#1}}
 
+
+%% Command for referencing an appendix
 \newcommand{\refappendix}[1]
 {Appendix \ref{#1}}
 
 \definecolor{light-gray}{gray}{0.95}
+
+
 %% language, filename, firstline, lastline, caption
 \newcommand{\addcodesnippet}[5]
 {
 	\lstinputlisting[language=#1, firstline=#3, lastline=#4, caption=#5, breaklines=true,backgroundcolor = \color{light-gray}]{./Code/#2}
 }
 
+
+%% language, filename, caption
 \newcommand{\addcodefile}[3]
 {
 	\lstinputlisting[language=#1, caption=#3, breaklines=true,backgroundcolor = \color{light-gray}]{./Code/#2}
 }
 
+%% comment
+\newcommand{\reportcomment}[1]
+{
+    \colorbox{red!50}{TODO: #1}
+}
